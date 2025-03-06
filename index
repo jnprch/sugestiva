@@ -27,7 +27,7 @@
     </video>
 
     <script>
-        const videos = ["video1.mp4", "video2.mp4", "video3.mp4"]; // Lista de videos
+        const videos = ["1. Instagram stories(3).mp4", "3. WEB.mp4", "5. Fiasconaro CORTO.mp4"], "7. CANNOLO STORY.mp4"], "Descuento30.mp4", "Panettone1€.mp4"]  ; // Lista de videos
         let index = 0;
         const player = document.getElementById("player");
         const source = document.getElementById("videoSource");

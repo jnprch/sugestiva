@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla Digital</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="player" autoplay muted playsinline>
+        <source id="videoSource" src="video1.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        const videos = ["video1.mp4", "video2.mp4", "video3.mp4"]; // Lista de videos
+        let index = 0;
+        const player = document.getElementById("player");
+        const source = document.getElementById("videoSource");
+
+        player.onended = function() {
+            index = (index + 1) % videos.length; // Pasa al siguiente video
+            source.src = videos[index];
+            player.load();
+            player.play();
+        };
+    </script>
+</body>
+</html>
